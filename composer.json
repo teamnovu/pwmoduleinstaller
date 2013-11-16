@@ -1,5 +1,5 @@
 {
-    "name": "hari/pw-module-installer",    
+    "name": "hari/pw-module",    
     "type": "composer-installer",
     "license": "BSD-2-Clause",
     "description": "Installs processwire 3rd party modules to PW system \"site/modules\" directory.",    
