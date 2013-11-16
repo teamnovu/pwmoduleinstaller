@@ -1,14 +1,10 @@
 {
-    "name": "aura/installer-system",
-    "version": "1.0.2",
+    "name": "hari/pw-module-installer",    
     "type": "composer-installer",
     "license": "BSD-2-Clause",
-    "description": "Installs Aura packages to the Aura system \"package\" directory.",
-    "replace" : {
-        "aura/installer-default" : "*"
-    },
+    "description": "Installs processwire 3rd party modules to PW system \"site/modules\" directory.",    
     "minimum-stability": "dev",
-    "keywords": ["aura", "installer"],
+    "keywords": ["processwire", "module", "installer"],
     "authors": [
         {
             "name": "Kyle Robinson Young",
@@ -19,6 +15,11 @@
             "name": "Paul M. Jones",
             "email": "pmjones88@gmail.com",
             "homepage": "http://paul-m-jones.com"
+        },
+        {
+            "name": "Hari KT",
+            "email": "kthari85@gmail.com",
+            "homepage": "http://harikt.com"
         }
     ],
     "require-dev": {
@@ -27,10 +28,10 @@
     },
     "autoload": {
         "psr-0": {
-            "Aura\\Composer\\": "src/"
+            "PW\\Composer\\": "src/"
         }
     },
     "extra" : {
-        "class" : "Aura\\Composer\\SystemInstaller"
+        "class" : "PW\\Composer\\SystemInstaller"
     }
 }
