@@ -8,5 +8,4 @@ This is very specific to [ProcessWire](http://processwire.com/).
 
 ## Thanks
 
-[Composer]: http://getcomposer.org/
-[Aura system]: https://github.com/auraphp/system
+[Aura](https://github.com/auraphp)
