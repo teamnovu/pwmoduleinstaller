@@ -22,10 +22,6 @@
             "homepage": "http://harikt.com"
         }
     ],
-    "require-dev": {
-        "composer/composer": "1.0.*",
-        "mikey179/vfsStream": "1.1.*"
-    },
     "autoload": {
         "psr-0": {
             "PW\\Composer\\": "src/"
