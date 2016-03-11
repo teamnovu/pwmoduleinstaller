@@ -1,6 +1,6 @@
 # Composer Installer for Process Wire
 
-Using this installer, all [Composer][https://getcomposer.org] packages of `"type" : "pw-module"`
+Using this installer, all [Composer](https://getcomposer.org) packages of `"type" : "pw-module"`
 and package of name `vendor/package-name` will be installed under 
 `site/modules/PackageName`.
 
