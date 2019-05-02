@@ -30,8 +30,9 @@ class SystemInstaller extends LibraryInstaller
      */
     public function getInstallPath(PackageInterface $package)
     {
+        $pwPath = $this->getPwPath($package);
         list($vendor, $name) = $this->getVendorAndName($package);
-        return "site/modules/{$name}";
+        return "{$pwPath}/{$name}";
     }
 
     /**
@@ -39,8 +40,9 @@ class SystemInstaller extends LibraryInstaller
      */
     public function getPackageBasePath(PackageInterface $package)
     {
+        $pwPath = $this->getPwPath($package);
         list($vendor, $name) = $this->getVendorAndName($package);
-        return "site/modules/{$name}";
+        return "{$pwPath}/{$name}";
     }
     
     /**
@@ -83,5 +85,15 @@ class SystemInstaller extends LibraryInstaller
         $text = str_replace('-', ' ', $text);
         $text = ucwords($text);
         return str_replace(' ', '', $text);
+    }
+
+    private function getPwPath(PackageInterface $package) {
+        $extra = $package->getExtra();
+
+        if (isset($extra['pw-module'], $extra['pw-module']['pw-path'])) {
+            $pwPath = $extra['pw-module']['pw-path'];
+        }
+
+        return $pwPath ? "{$pwPath}/site/modules/" : "site/modules/";
     }
 }
